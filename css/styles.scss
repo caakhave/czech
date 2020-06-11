@@ -1,0 +1,475 @@
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Carter+One&family=Roboto:wght@400;500;700&family=Sriracha&display=swap');
+
+
+$mint: #83c683;
+$mint-dark: #79a779;
+$dark: #212529;
+
+* {
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+}   
+
+body {
+    background-color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    color: rgba(255,255,255,.75);
+}
+
+a:hover {
+    color: rgba(255,255,255,.9);
+    text-decoration: none;
+}
+
+
+#grid {
+    display: grid;
+    overflow-x: hidden;
+    position: relative;
+    margin-left: -13em;
+    transition:all .5s ease-in-out;
+    grid-template-columns: 15em calc(100% - 1em);
+    grid-gap: 1em;
+    grid-template-areas:
+    ". main";
+}
+
+nav {
+    grid-row: 1;
+    grid-column: 1;
+    padding-top: 30px;
+    
+}
+
+nav.logo {
+    margin-left: 0;
+}
+
+
+.fa-bars {
+    color: $mint;
+    border: 1px dotted $mint;
+    border-radius: 4px;
+    padding: 5px 8px;
+}
+
+
+.bg {
+    background-image: url("/img/cz-home-img.jpg");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.navbar-dark .navbar-toggler {
+    border: none;
+}
+
+.main {
+    grid-area: main;
+    grid-column: 2;
+   
+    padding-top: 60px;
+    padding-right: 15em;
+    margin-left: 2em;
+    margin-bottom: 8em;
+    margin-right: 2em;
+}
+
+
+.navbar-brand {
+    margin-right: 7rem;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 2.5rem;
+}
+
+.tab {
+	display: none;
+	padding: .25em .5em;
+	color: white;
+	background: #343a40;
+	border: none;
+    transform: rotate(90deg);
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition:all .5s ease-in-out;
+}
+
+
+.tab:focus {
+	outline-color: #fff;
+}
+
+
+.tab {
+    position: fixed;
+    display: block;
+    top: 7em;
+    left: 0em;
+}
+
+.tab:hover {
+    color: $mint;
+}
+
+
+.tab.reveal {
+    left: 13em;
+    transition:all .5s ease-in-out;
+}
+
+#grid.reveal {
+    margin-left: 0;
+    transition:all .5s ease-in-out;
+}
+
+.mint {
+    color: rgba($mint,.9);
+}
+
+.btn-mint {
+    background-color: $mint;
+    border-color: $mint;
+    color: #fff;
+}
+
+.btn-mint:hover {
+    background-color: $mint-dark;
+    border-color: $mint-dark;
+}
+
+
+
+a.mint:hover {
+    color: $mint;
+}
+
+nav h6 span {
+    color: $mint-dark;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.flex-column a.nav-link {
+    color: $dark;
+}
+
+.flex-column a.nav-link:hover {
+    color: #343a40;
+    background-color: rgba($mint,.1);
+}
+
+.bg-mint {
+    background-color: rgba($mint,.1);
+}
+
+li.nav-item.active a {
+    color: $mint !important;
+    font-weight: bold;
+}
+
+
+
+.table-striped tbody tr:nth-of-type(2n+1) {
+    background-color: rgba($mint,.1);
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255,255,255,.75);
+}
+
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
+    color: rgba(255,255,255,.9);
+}
+
+
+.dropdown-menu {
+    color: #fff;
+    background-color: #343a40;
+}
+
+.dropdown-item {
+    color: #fff;
+}
+
+.main h4 {
+    margin: 35px 0 15px 0;
+    font-size: 1.3em;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+
+hr.divider {
+    border-top: 2px solid #7e7e7e;
+    text-align: center;
+    width: 80%;
+    margin: 50px 10%;
+  }
+  hr.divider:after {
+    content: '♕';
+    display: inline-block;
+    position: relative;
+    top: -25px;
+    padding: 0 10px;
+    background: #fff;
+    color: #8c8b8b;
+    font-size: 28px;
+  }
+
+  ul.table-menu li.nav-item a.nav-link {
+      font-size: .8em;
+      color: $dark;
+      margin-bottom: 25px;
+  }
+  
+
+  h2.tagline {
+      text-align: center;
+      color: #fff;
+      font-family: 'Bubblegum Sans', cursive;
+      font-size: 3em;
+      margin-top: 80px;
+      text-shadow: 2px 2px 3px #111;
+  }
+
+  .cases {
+      text-align: center;
+  }
+
+.teacher-name span {
+    font-size: .8em;
+    font-style: italic;
+    color: rgba($dark, .9);
+}
+
+.teachers .media {
+    border-bottom: 2px dashed $mint;
+    padding-bottom: 15px;
+    margin-bottom: 35px;
+}
+
+.teachers .media:nth-child(4) {
+    border-bottom: none;
+}
+
+a.teacher-list {
+    display: block;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: $dark;
+    text-align: center;
+}
+
+a.teacher-list:hover {
+    color: $mint;
+    text-decoration: underline;
+}
+
+
+.fa-vcard-o {
+    display: block;
+    text-align: center;
+    color: $dark;
+    margin-bottom: 10px;
+}
+
+.teacher-bottom-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.teacher-bottom-content a {
+    color: #fff;
+    background: $mint;
+    display: block;
+    border-radius: 6px;
+    padding: .25em .5em;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+
+.resources .card {
+    margin-bottom: 25px;
+}
+
+.btn-resources {
+    float: right;
+}
+
+
+.test h2 {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.test h4 {
+    text-align: center;
+    margin: 15px 0 25px;
+}
+
+.test p {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.vocab h2 {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.vocab p {
+    margin: 15px 0;
+    font-size: 1.2em;
+    text-align: center;
+    font-weight: bold;
+}
+
+.vocab p span {
+    font-weight: normal;
+    font-style: italic;
+    font-size: 1.1em;
+    display: block;
+}
+
+
+
+
+/* flip card */
+
+ /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+ .flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 100px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    margin-bottom: 30px;
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: #eee;
+    color: $dark;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color: $mint;
+    color: white;
+    transform: rotateY(180deg);
+  } 
+
+@media screen and (max-width: 991px) {
+
+.tab {
+    display: none;
+}
+
+nav {
+    display: none;
+}
+
+.nav-link {
+    line-height: .8;
+}
+
+h2.tagline {
+    font-size: 2.4em;
+}
+
+
+}
+
+
+
+@media screen and (max-width: 767px) {
+
+    h2.tagline {
+        font-size: 2em;
+    }
+
+    .btn-resources {
+        float: left;
+    }
+
+
+}
+
+
+
+
+/*--------------------------------------------------------------
+Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar */
+}
+
